@@ -1,4 +1,27 @@
 .advantages__item {
+  text-align: center;
   line-height: 21px;
+
   background-color: #eeeeee;
+
+  &:first-child {
+    position: relative;
+    padding-top: 60px;
+  }
+
+  &:first-child::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 320px;
+    height: 37px;
+    background-image: url("../../img/mask-index.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  p {
+    color: #333333;
+  }
 }

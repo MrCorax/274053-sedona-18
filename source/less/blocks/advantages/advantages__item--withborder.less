@@ -1,4 +1,11 @@
 .advantages__item--withborder {
-  border-top: 1px solid #d6d6d6;
-  border-bottom: 1px solid #d6d6d6;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+    height: 1px;
+    background-color: #d6d6d6;
+  }
 }
