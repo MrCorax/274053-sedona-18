@@ -36,81 +36,93 @@
       </nav>
     </header>
 
-    <main class="page-main">
+    <main class="page-main wrapper">
       <div class="background">
       </div>
       <h1 class="page-main__title">Оставьте свой отзыв</h1>
-      <p class="page-main__promo">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещеных вами достопримечательностях</p>
+      <p class="page-main__promo page-main__promo--fwidth">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещеных вами достопримечательностях</p>
       <section class="feedback">
         <h2 class="visually-hidden">Форма отзыва</h2>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="feedback-form__personal-date">
-            <legend>Представьтесь:</legend>
-            <label>Имя<sup>*</sup>:
-              <input type="text" value="Петр" required>
-            </label>
-            <label>Фамилия<sup>*</sup>:
-              <input type="text" value="Иванов" required>
-            </label>
-            <label>Отчество:
-              <input type="text" value="Александрович">
-            </label>
+          <fieldset class="part-form feedback-form__part">
+            <h3 class="part-form__title">Представьтесь:</h3>
+            <div class="part-form__field part-form__field--personal-date">
+              <label for="name">Имя<sup>*</sup>:</label>
+              <input id="name" type="text" value="Петр" required>
+            </div>
+            <div class="part-form__field part-form__field--personal-date">
+              <label for="surname">Фамилия<sup>*</sup>:</label>
+              <input id="surname" type="text" value="Иванов" required>
+            </div>
+            <div class="part-form__field part-form__field--personal-date">
+              <label for="patronymic">Отчество:</label>
+              <input id="patronymic" type="text" value="Александрович">
+            </div>
           </fieldset>
-          <fieldset class="feedback-form__contact-date">
-            <legend>Контактная информация:</legend>
-            <label>Контактный телефон<sup>*</sup>:
-              <input type="tel" value="Введите телефон" required>
-            </label>
-            <label>Электронная почта<sup>*</sup>:
-              <input type="email" value="Введите e-mail" required>
-            </label>
+          <fieldset class="part-form feedback-form__part">
+            <h3 class="part-form__title">Контактная информация:</h3>
+            <div class="part-form__field part-form__field--contact-date part-form__field--phone-icon">
+              <label for="conttel">Контактный телефон<sup>*</sup>:</label>
+              <input id="conttel" type="tel" value="Введите телефон" required>
+            </div>
+            <div class="part-form__field part-form__field--contact-date part-form__field--mail-icon">
+              <label for="email">Электронная почта<sup>*</sup>:</label>
+              <input id="email" type="email" value="Введите e-mail" required>
+            </div>
           </fieldset>
-          <fieldset class="feedback-form__opinion">
-            <legend>Ваше общее впечатление:</legend>
-            <label>
+          <fieldset class="part-form feedback-form__part">
+            <h3 class="part-form__title">Ваше общее впечатление:</h3>
+            <label class="part-form__item">
               <input type="radio" name="review" checked>
+              <span class="part-form__icon part-form__icon--radio"></span>
               Скорее положительное
             </label>
-            <label>
+            <label class="part-form__item">
               <input type="radio" name="review">
+              <span class="part-form__icon part-form__icon--radio"></span>
               Скорее отрицательно
             </label>
-            <label>
+            <label class="part-form__item">
               <input type="radio" name="review">
+              <span class="part-form__icon part-form__icon--radio"></span>
               Затрудняюсь ответить
             </label>
           </fieldset>
-          <fieldset class="feedback-form__visit">
-            <legend>Посещеные достопримечательности</legend>
-            <label>
-              <input type="checkbox" checked>
+          <fieldset class="part-form feedback-form__part">
+            <h3 class="part-form__title">Посещеные достопримечательности:</h3>
+            <label class="part-form__item">
+              <input class="visually-hidden" type="checkbox" checked>
+              <span class="part-form__icon part-form__icon--checkbox"></span>
               Мост Дьявола
             </label>
-            <label>
-              <input type="checkbox" checked>
+            <label class="part-form__item">
+              <input class="visually-hidden" type="checkbox" checked>
+              <span class="part-form__icon part-form__icon--checkbox"></span>
               Гора-Колокол
             </label>
-            <label>
-              <input type="checkbox" checked>
+            <label class="part-form__item">
+              <input class="visually-hidden" type="checkbox" checked>
+              <span class="part-form__icon part-form__icon--checkbox"></span>
               Слайд-парк
             </label>
-            <label>
-              <input type="checkbox">
+            <label class="part-form__item">
+              <input class="visually-hidden" type="checkbox">
+              <span class="part-form__icon part-form__icon--checkbox"></span>
               Красные скалы
             </label>
           </fieldset>
-          <fieldset class="feedback-form__comment">
-            <legend>Опишите свои эмоции:</legend>
-            <label class="visually-hidden">Оставьте комментарий</label>
-            <textarea rows="8" cols="80">Опишите подробно все свои восторги</textarea>
+          <fieldset class="part-form feedback-form__comment">
+            <h3 class="visually-hidden">Оставьте комментарий</h3>
+            <label class="part-form__title--comment part-form__title" for="story">Опишите свои эмоции:</label>
+            <textarea class="part-form__comment" id="story" rows="10" cols="80" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
-          <button class="btn" type="submit" name="button">Отправить отзыв</button>
+          <button class="btn feedback-form__btn" type="submit" name="button">Отправить отзыв</button>
         </form>
       </section>
 
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer wrapper">
       <div class="page-footer__wrapper">
         <b class="page-footer__hashtag">#visitsedona</b>
         <div class="page-footer__social social">
@@ -133,16 +145,16 @@
       </div>
     </footer>
 
-    <section class="failure-popup">
-      <h2 class="failure-popup__title">Что-то пошло не так!</h2>
-      <p class="failure-popup__promo">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="btn" type="button">Ок</button>
+    <section class="popup popup-window wrapper">
+      <h2 class="popup__title">Что-то пошло не так!</h2>
+      <p class="popup__promo">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="btn popup__btn--failure" type="button">Ок</button>
     </section>
 
-    <section class="success-popup">
-      <h2 class="success-popup__title">Ваш отзыв отправлен!</h2>
-      <p class="success-popup__promo">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class="btn" type="button">Закрыть окно</button>
+    <section class="popup popup-window wrapper">
+      <h2 class="popup__title">Ваш отзыв отправлен!</h2>
+      <p class="popup__promo">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="btn popup__btn--success" type="button">Закрыть окно</button>
     </section>
 
   </body>
