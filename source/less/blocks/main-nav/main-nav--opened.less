@@ -1,0 +1,41 @@
+.main-nav--opened .main-nav__toggle {
+  display: block;
+  top: 25px;
+  width: 27px;
+  height: 4px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+  border: 0;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    transform: rotate(45deg) scale(1.1);
+  }
+
+  &:active {
+    background-color: #5496bd;
+    transform: rotate(45deg) scale(1);
+
+    &::before {
+      background-color: #5496bd;
+      transform: rotate(45deg) scale(1), rotate(45deg) scale(1);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    right: 11px;
+    width: 4px;
+    height: 27px;
+    transform: rotate(0deg);
+
+    background-color: #ffffff;
+  }
+}
+
+.main-nav--opened svg {
+  display: none;
+}

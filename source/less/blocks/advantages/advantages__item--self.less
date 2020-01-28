@@ -1,8 +1,16 @@
 .advantages__item--self {
+  position: relative;
   padding-left: 70px;
   padding-bottom: 32px;
   text-align: left;
   background-color: #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+  }
 
   h3,
   p {
